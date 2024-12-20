@@ -30,5 +30,4 @@ db.createCollection("collection_name"); // here db is the database and work as o
 */
 
 
-
 ?>

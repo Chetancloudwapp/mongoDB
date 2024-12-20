@@ -19,6 +19,10 @@ Examples :- db.students.find({name: {$regex: "Khan"}})
 
 {$expr :{ <expression> }} // expression mai comparison operator ya phir math operator ka use krskte hai 
 
+db.monthlyBudget.find({
+    $expr : { $lt: ["$spend","$budget"]}
+})
+
 3). $mod = Means Modulas iska main use division k time pr hota hai jaha pr hum remainder ko check krna chahte hai
 
 {field: {$mod : [divisor, remainder]}} // divisor ko divide krte hai field ki value se and agar uska remainder array k remainder se match krta hai to vo saara data aajata hai 
