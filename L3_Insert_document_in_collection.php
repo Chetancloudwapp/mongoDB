@@ -13,4 +13,5 @@ INSERT MANY = db.collection_name.insertMany([
             {field1:"value", field2:value"}
         ])
 */
+
 ?>
