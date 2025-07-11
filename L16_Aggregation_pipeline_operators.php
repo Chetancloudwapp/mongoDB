@@ -1,6 +1,26 @@
 <?php
 /*
 
+LIST OF AGGREGATION PIPELINE OPERATOR :-
+
+1). $match
+2). $count
+3). $sort
+4). $sortByCount
+5). $project
+6). $limit
+7). $skip
+8). $sample
+9). $group
+10). $lookup
+11). $bucket
+12). $bucketAuto
+13). $addFields
+14). $unwind
+15). $out
+16). $merge
+17). $unionWith
+
 PIPELINE AGGREGATION SEARCH :- Let suppose humare document mai hume searching krke refining krni hai and after the search result, hum uspr or refinement lagate hai i.e searching result pr bhi or search lagani hai, isi ko hum kahte hai pipeline aggregation that means data ko stage wise filter krte jana . 
 
 Our Document

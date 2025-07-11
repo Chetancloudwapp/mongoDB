@@ -1,5 +1,6 @@
 <?php
 /*
+
 Introduction of the MongoDB :- MOngoDB is a NoSQL (non-relational) database. It stores data in a type of json format called BSON.
 
 What is Database ?
@@ -63,7 +64,7 @@ d). Null
 2). BSON(Binary Json) support following datatypes :-
 
 Benifit : Jyada alag-alag tarah ka data save kara skte hai 
-FORAMT => Binary format mai save hota hai i.e NON HUMAN READABLE 
+FORMAT => Binary format mai save hota hai i.e NON HUMAN READABLE 
 SIZE => More Compact and less file size
 SPEED => Faster to parse and write because of its binary format
 USAGE => MongoDB and database storage with a rich set of data types.
