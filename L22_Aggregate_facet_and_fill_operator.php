@@ -33,7 +33,6 @@ db.students.aggregate([
    }
 ])
 
-
 // examples :- with multiple conditions
 
 Case-1 :- Show total sales with sum
@@ -150,16 +149,5 @@ db.students.aggregate([
    }
 ])
 
-
 */
-
-// db.students.insertMany([
-//     { _id:1, name:"Akshay Kumar", class:"Btech", per:52},
-//     { _id:2, name:"Salman Khan", class:"BCA", per:67},
-//     { _id:3, name:"Deepika Padukone", class:"Btech", per:63},
-//     { _id:4, name:"John Abraham", class:"BCA"},
-//     { _id:5, name:"Katrina Kaif", class:"Btech", per:90},
-//     { _id:6, name:"Abhishek Bachan", class:"BCA"},
-// ])
-
-// ?>
+?>

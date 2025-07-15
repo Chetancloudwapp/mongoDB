@@ -20,6 +20,8 @@ LIST OF AGGREGATION PIPELINE OPERATOR :-
 15). $out
 16). $merge
 17). $unionWith
+18). $facet
+19). $fill
 
 PIPELINE AGGREGATION SEARCH :- Let suppose humare document mai hume searching krke refining krni hai and after the search result, hum uspr or refinement lagate hai i.e searching result pr bhi or search lagani hai, isi ko hum kahte hai pipeline aggregation that means data ko stage wise filter krte jana . 
 
