@@ -6,10 +6,10 @@ Introduction of the MongoDB :- MOngoDB is a NoSQL (non-relational) database. It 
 What is Database ?
 => A Database is a collection of data stored in a format that can easily be accessed.
 
-Types of Database => it has Two types SQL database and NoSQL Database
+Types of Database => It has Two types SQL database and NoSQL Database
 
 ************************** SQL DATABASE ***************************
-=> SQL Database : Data is stored in the form of tables i.e in a relational format for example: Oracle, MySql, PostgreSQL, MS SQL Server
+=> SQL Database :- Data is stored in the form of tables i.e in a relational format for example: Oracle, MySql, PostgreSQL, MS SQL Server
 => Sql database mai tables mai aapas mai relations hote hai and use retrieve krne k liye hum STRUCTURED QUERY LANGUAGE (SQL) ka use krte hai
 
 Disadvantage of SQL Database : 
@@ -25,7 +25,7 @@ Disadvantage of SQL Database :
 }
 {
     name:"Shyam Kumar"
-    age:28              // document two
+    age:28        // document two
     gender:"Male"
 }
 

@@ -158,25 +158,77 @@ db.students.aggregate([
         $project: {
            trimmed: { $ltrim: { input: "$name", chars: " "}}
            trimmed: { $rtrim: { input: "$name", chars: " "}}
-           trimmed: { $trim: { input: "$name", chars: " "}}
+           trimmed: { $trim:  { input: "$name", chars: " "}}
         }
     }
 ])
 
+// DateFrom OPERATOR
+db.students.aggregate([
+    {
+       $project: {
+          date: { $dateFromString: {dateString: "$dob"}} // date nikal kr deta hai string mai se
+       }
+    }
+])
 
+// DateTO OPERATOR
+db.students.aggregate([
+    {
+       $project: {
+          name:1,
+          date: { $dateToString: {format: "%Y-%m-%d", date:"$dob"}}
+       }
+    }
+])
 
+// INDEX OPERATORS (index return krta hai)
+db.students.aggregate([
+   {
+      $project: {
+         name:1,
+        //  index: { $indexOfBytes: ["$name", "K"]}
+        //  index: { $indexOfBytes: ["$name", "K", 5]} // 5th index se starting kare or capital 'K' ko find kare
+        //  index: { $indexOfBytes: ["$name", "K", 5, 16]} // 5th index se starting kare or capital 'K' ko find kare 16th index tak
+      }
+   }
+])
 
+// REGEX OPERATORS (It return true or false)
+db.students.aggregate([
+    {
+       $project: {
+          name:1,
+          isMatch: { $regexMatch: { input: "$name", regex: "^Kat"}} // aise string ko search krna hai jo Kat se start ho rahi ho
+          isMatch: { $regexMatch: { input: "$name", regex: "or$"}} // aise string ko search krna hai jiske last mai or aaraha ho
+       }
+    }
+])
 
+// REGEX FIND OPERATORS (It return index number jo bhi phle data mil jayga uska )
+db.students.aggregate([
+    {
+       $project: {
+          name:1,
+          isMatch: { $regexFind: { input: "$name", regex: "Khan"}} 
+          
+       }
+    }
+])
 
+// REGEXFINDAll OPERATORS
+db.students.aggregate([
+    {
+       $project: {
+          name:1,
+          isMatch: { $regexFindAll: { input: "$name", regex: "^Sa"}}  // jaha pr bhi sa mile unn sabhi ka index number return kare
+          
+       }
+    }
+])
 
 */
 
-// db.students2.insertMany([
-//     { _id:1, firstName:"Akshay", lastName: "Kumar", age:"25"},
-//     { _id:2, firstName:"Salman", lastName: "Khan", age: "23"},
-//     { _id:3, firstName:"Deepika", lastName: "Padukone", age: "24"},
-//     { _id:4, firstName:"John", lastName: "Abraham", age: "25"},
-//     { _id:5, firstName:"Katrina", lastName: "Kaif", age:"23"},
-// ])
+
 
 ?>
