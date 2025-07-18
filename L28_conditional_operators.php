@@ -89,11 +89,4 @@ db.students.aggregate([
 
 */
 
-
-// db.users.insertMany([
-//     { _id:1, name:"Akshay Kumar", email:"akshay@gmail.com"},
-//     { _id:2, name:"Salman Khan"},
-//     { _id:3, name:"John Abraham", email:null},
-// ])
-
 ?>
