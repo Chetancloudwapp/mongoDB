@@ -28,7 +28,31 @@ db.students.createIndex(
 
 // db.users.find().explain() // agar hum dekhna chahte hai ki find kis tarah work krta hai
 db.users.find().explain('executionStats') // executionStats detials mai explain krta hai
+db.collection_name + 2 time tab button to show all of the mongodb commands
+db.users.find({name:"Kartik Aryan"}).explain("executionStats")
 
+// HOW TO CREATE INDEX
+db.users.createIndex({name:-1})
+db.users.createIndex({class:1, age:-1}) // if we want to apply grouping index
+db.students.getIndexes() // to show the index list
+db.users.dropIndex("name_-1") // if we want to drop index
+db.users.createIndex({email:1},{unique:true}) // unique email se indexing
+
+
+*************** TEST INDEXING *******************
+db.students.createIndex({name:"text"})
+
+db.users.find({ $text: { $search: "Khan"}}) // text ke behalf pr search karega
+
+************** WILDCARD INDEXING *****************
+
+ => Iski help se hum sabhi col pr indexing krskte hai
+
+Syntax :-
+
+db.users.createIndex({"$**":1}) // users collections mai sabhi column pr indexing hojaye
+
+Disadvantage :- Iss tarah ki indexing humari ram mai kaafi space acquire krti hai jisse speed bhi kaafi slow hoskti hai 
 
 */
 
@@ -39,5 +63,7 @@ db.users.find().explain('executionStats') // executionStats detials mai explain 
 //     { _id:4, name:"Shahid Kapoor", age:35, class:"BCom", email:"shahid@gmail.com"},
 //     { _id:5, name:"Kartik Aryan", age:20, class:"BCA", email:"kartik@gmail.com"},
 // ])
+
+
 
 ?>
